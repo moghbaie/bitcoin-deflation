@@ -9,9 +9,14 @@ require(devtools)
 install_github('shiny', 'rstudio')
 require(shiny)
 ```
-
+## Running the app
 Second, run the following command in your R Studio:
 ```
 shiny::runGitHub('bitcoin-deflation', 'moghbaie')
 ```
+## Built with
+[shiny](http://shiny.rstudio.com/) -web applictaion framework for R
+
 ## Contributers
+Mehrnoosh Oghbaie
+Hongjing Zhang   
