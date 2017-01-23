@@ -3,9 +3,9 @@ The goal of this project was to investigate the deflationary effect of Bitcoin o
 
 ## To run the code in your R Studio
 First, install shiny  packages as follow:
-require(devtools)
-install_github('shiny', 'rstudio')
-require(shiny)
+<require(devtools)>
+<install_github('shiny', 'rstudio')>
+<require(shiny)>
 
 Second, run the following command in your R Studio:
-shiny::runGitHub('bitcoin-deflation', 'moghbaie')
+<shiny::runGitHub('bitcoin-deflation', 'moghbaie')>
