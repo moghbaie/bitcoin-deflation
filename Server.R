@@ -9,6 +9,7 @@ library(xts)
 library(corrplot)
 library(psych)
 library(hydroTSM)
+library(nFactors)
 options(shiny.maxRequestSize=10000*1024^2)
 #~/Documents/FE541/bitcoin-deflation
 #~/Documents/FE541/shiny/
@@ -260,7 +261,7 @@ shinyServer(function(input, output) {
   output$Print5 <-renderPrint({
     summary(mod_gam)
   })
-  library(nFactors)
+  
   ev <- eigen(cor(econ_data[,c(-1,-2)])) # get eigenvalues
   ap <- parallel(subject=nrow(econ_data[,c(-1,-2)]),var=ncol(econ_data[,c(-1,-2)]),
                  rep=100,cent=.05)
