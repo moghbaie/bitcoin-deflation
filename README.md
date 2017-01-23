@@ -14,8 +14,11 @@ Second, run the following command in your R Studio:
 ```
 shiny::runGitHub('bitcoin-deflation', 'moghbaie')
 ```
+You could also find the result [here](https://moghbaie.shinyapps.io/bitcoin-deflation/)
+
 ## Built with
 [shiny](http://shiny.rstudio.com/) -web applictaion framework for R
+
 
 ## Contributers
 Mehrnoosh Oghbaie
