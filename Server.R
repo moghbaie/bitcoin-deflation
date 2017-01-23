@@ -9,12 +9,13 @@ library(xts)
 library(corrplot)
 library(psych)
 library(hydroTSM)
+options(shiny.maxRequestSize=10000*1024^2)
 #~/Documents/FE541/bitcoin-deflation
 #~/Documents/FE541/shiny/
-bc <- read.csv("~/Documents/FE541/bitcoin-deflation/bit_usd.csv", header=TRUE)
-data <- read.csv("~/Documents/FE541/bitcoin-deflation/bitcoin_data.csv")
-dxy <- read.csv("~/Documents/FE541/bitcoin-deflation/dxy.txt")
-ir <- read.csv("~/Documents/FE541/bitcoin-deflation/Inflation_rate.csv")
+bc <- read.csv("bit_usd.csv", header=TRUE)
+data <- read.csv("bitcoin_data.csv")
+dxy <- read.csv("dxy.txt")
+ir <- read.csv("Inflation_rate.csv")
 
 
 # Define server logic required to plot various variables against mpg
@@ -184,7 +185,7 @@ shinyServer(function(input, output) {
     plot(datam, main="Bitcoin monthly data", cex.lab = 1.5)
   })
   
-  write.csv(datam,'~/Documents/FE541/bitcoin-deflation/datam.csv')
+  write.csv(datam,'datam.csv')
   #filtering ir on Date
   irt <- subset(ir,Date>=as.Date("2013-05-01"))
   merge1=merge(dxm,bcm,irt$Inflation_rate)
@@ -218,7 +219,7 @@ shinyServer(function(input, output) {
   })
   
   #economic data
-  econ_data<- read.csv("~/Documents/FE541/bitcoin-deflation/Total_data1.csv")
+  econ_data<- read.csv("Total_data1.csv")
   econ_data$Date <- as.Date(econ_data$Date,format="%m/%d/%Y")
   #str(econ_data)
   output$Plot34 <- renderPlot({
