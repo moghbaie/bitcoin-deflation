@@ -11,7 +11,9 @@ shinyUI(pageWithSidebar(
   sidebarPanel(
     span("This project was done by"), 
     a("Mehrnoosh Oghbaie", href="https://github.com/moghbaie/bitcoin-deflation", target="_blank") , 
-    span("& Hongjing Zhang as part of the"), 
+    span("&"),
+    a("Hongjing Zhang", href="https://github.com/hjzhang79", target="_blank"), 
+    span ("as part of the"), 
     a("applied statistics with application in finance", href="https://github.com/moghbaie/bitcoin-deflation", target="_blank"),span("course at Stevens Institute of Technology.")
     ),
  

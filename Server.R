@@ -273,6 +273,7 @@ shinyServer(function(input, output) {
     #plot(f3w)
     fa.diagram(f3w)
   })
+  attach(econ_data)
   SumScale1<-(Producer_Price_Index+Export+Import+Customer_Price_Index+ 
                 Global_Price_Brent_Crude + (10-Trade_Weighted_Dollar)+
                 (10-+Bitcoin_Est_Transaction_Vol_USD))/7
